@@ -6,7 +6,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "bootstrap": "^4.4.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
@@ -14,10 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject",
+    "proxy": "node ./api-server.js",
+    "startServers": "concurrently --kill-others \"npm run proxy\" \"npm run start\""
   },
   "browserslist": {
     "production": [
@@ -30,5 +31,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:8081",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "moment": "^2.25.3",
+    "sp-rest-proxy": "^2.11.0"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "api-server.js",
+  "author": "",
+  "license": "ISC"
 }
