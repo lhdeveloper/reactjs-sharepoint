@@ -1,3 +1,32 @@
+
+# Configuração do Servidor local
+
+Check if the path to server.js is correct.
+
+3. Add npm task for serve into package.json:
+
+"scripts": {
+  "serve": "node ./api-server.js"
+}
+
+4. Run npm run serve.
+
+5. Provide SharePoint configuration parameters.
+
+6. Test local API proxy in action.
+
+## Para rodar o servidor do React com o servidor acima
+
+Digite no terminal npm run startServers
+
+### Ambiente para teste da api:
+http://localhost:8081
+
+### Ambiente dev react
+http://localhost:3000
+
+================================================================
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
+    "eslint": "^6.8.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
@@ -18,7 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "proxy": "node ./api-server.js",
-    "startServers": "concurrently --kill-others \"npm run proxy\" \"npm run start\""
+    "startServers": "concurrently --kill-others \"npm run proxy\" \"npm run start\"",
+    "serve": "node ./api-server.js"
   },
   "browserslist": {
     "production": [

@@ -15,15 +15,13 @@ export default class App extends React.Component {
     
     
     componentDidMount(){
-        var fields = 'Id,Title,Ordem,URL,ItemPrincipal/Title',
-            expand = 'ItemPrincipal';
+
             
-        var acessoRapido = fetch(`_api/web/lists(guid'8C424165-552E-49B2-B651-5F7109C29E2D')/Items?$select${fields}=&$expand=${expand}`, {  
+        var acessoRapido = fetch(`_api/web/lists(guid'8C424165-552E-49B2-B651-5F7109C29E2D')/Items?$select=Id,Title,URL,Ordem,ItemPrincipal/Title&$expand=ItemPrincipal`, {  
             accept: 'application/json;odata=verbose',
         })
           .then(r => r.json())
           .then(res => {
-              debugger
                 var orderResults = res.d.results.sort((a,b) =>{
                     if(a.Ordem < b.Ordem){
                         return -1
@@ -45,7 +43,6 @@ export default class App extends React.Component {
         })
           .then(r => r.json())
           .then(api => {
-              console.log(api.d)
                 this.setState({
                     api:api.d
                 });
